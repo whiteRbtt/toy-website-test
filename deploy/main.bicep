@@ -84,8 +84,6 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' = {
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2021-12-01-preview' = {
   name: analyticWorkspaceName
   location: location
-
-  eTag: 'i love frogs'
   properties: {}
 }
 
