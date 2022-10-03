@@ -95,9 +95,7 @@ resource workspace 'Microsoft.OperationalInsights/workspaces@2021-12-01-preview'
   name: analyticWorkspaceName
   location: location
   properties: {
-    sku: {
-      name: environmentConfigurationMap[environmentType].logAnalytics.sku.name
-    }
+    sku: environmentConfigurationMap[environmentType].logAnalytics.sku
   }
 }
 
