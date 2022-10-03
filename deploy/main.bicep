@@ -22,6 +22,11 @@ var analyticWorkspaceName = 'myAnalyticsWorkspace-${resourceNameSuffix}'
 // Define the SKUs for each component based on the environment type.
 var environmentConfigurationMap = {
   Production: {
+    logAnalyticsWorkspace: {
+      sku: {
+        name: 'Standard'
+      }
+    }
     appServicePlan: {
       sku: {
         name: 'S1'
@@ -35,6 +40,11 @@ var environmentConfigurationMap = {
     }
   }
   Test: {
+    logAnalyticsWorkspace: {
+      sku: {
+        name: 'Standard'
+      }
+    }
     appServicePlan: {
       sku: {
         name: 'F1'
@@ -84,7 +94,11 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' = {
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2021-12-01-preview' = {
   name: analyticWorkspaceName
   location: location
-  properties: {}
+  properties: {
+    sku: {
+      name: environmentConfigurationMap[environmentType].logAnalyticsWorkspace.sku
+    }
+  }
 }
 
 resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
