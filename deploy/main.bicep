@@ -24,7 +24,7 @@ var environmentConfigurationMap = {
   Production: {
     logAnalyticsWorkspace: {
       sku: {
-        name: 'Free'
+        name: 'Standard'
       }
     }
     appServicePlan: {
@@ -42,7 +42,7 @@ var environmentConfigurationMap = {
   Test: {
     logAnalyticsWorkspace: {
       sku: {
-        name: 'Standard'
+        name: 'Free'
       }
     }
     appServicePlan: {
