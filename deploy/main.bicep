@@ -74,7 +74,7 @@ resource appServiceApp 'Microsoft.Web/sites@2021-01-15' = {
   }
 }
 
-resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
+resource applicationInsights 'Microsoft.Insights/components@2018-05-01-preview' = {
   name: applicationInsightsName
   location: location
   kind: 'web'
