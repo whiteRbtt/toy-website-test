@@ -24,7 +24,7 @@ var environmentConfigurationMap = {
   Production: {
     logAnalytics: {
       sku: {
-        name: 'Standard'
+        name: 'PerGB2018'
       }
     }
     appServicePlan: {
@@ -42,7 +42,7 @@ var environmentConfigurationMap = {
   Test: {
     logAnalytics: {
       sku: {
-        name: 'Free'
+        name: 'PerGB2018'
       }
     }
     appServicePlan: {
